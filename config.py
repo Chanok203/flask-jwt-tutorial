@@ -13,3 +13,13 @@ class Config(object):
         os.environ["MYSQL_HOST"],
         os.environ["MYSQL_DATABASE"],
     )
+
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    SECRET_KEY = os.environ["SECRET_KEY"]
+    JWT_SECRET_KEY = os.environ["JWT_SECRET_KEY"]
+
+    JWT_BLACKLIST_ENABLED = True
+    JWT_BLACKLIST_TOKEN_CHECKS = ["access", "refresh"]
+
+    ADMINS = ["pathompatai_c@silpakorn.edu"]
