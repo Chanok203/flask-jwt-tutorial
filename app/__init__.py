@@ -1,6 +1,11 @@
 from flask import Flask
 from config import Config
 from flask_restful import Api
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 
 def create_app(config_class=Config):
